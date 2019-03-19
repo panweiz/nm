@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>nm</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="intd">
+  <ul class="tabs">
+    <li><a href="#novel">小說</a></li>
+    <li><a href="#movie">電影</a></li>
+    <li><a href="#mix">電視劇 / 綜藝</a></li>
+    <div class="img i1"></div>
+    <div class="img i2"></div>
+    <div class="img i3"></div>
+    <div class="img i4"></div>
+  </ul>
+  <div class="view">
+    <div id="novel">
+      <div class="n1" v-for="novel in novels">
+        <div class="img"><img :src="novel.img"/></div>
+        <div class="syn">
+          <div class="name">{{novel.name}}</div>
+          <div class="content">{{novel.content}}</div>
+        </div>
+      </div>
+    </div>
+    <div id="movie">
+      <div class="m1" v-for="movie in movies">
+        <div class="img"><img :src="movie.img"/></div>
+        <div class="syn">
+          <div class="name">{{movie.name}}</div>
+          <div class="content">{{movie.content}}</div>
+        </div>
+      </div>
+    </div>
+    <div id="mix">
+      <div class="x1" v-for="mix in mix1">
+        <div class="img"><img :src="mix.img"/></div>
+        <div class="syn">
+          <div class="name">{{mix.name}}</div>
+          <div class="content">{{mix.content}}</div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="x2" v-for="mix in mix2">
+        <div class="img"><img :src="mix.img"/></div>
+        <div class="syn">
+          <div class="name">{{mix.name}}</div>
+          <div class="content">{{mix.content}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
